@@ -1,0 +1,74 @@
+@import '~antd/dist/antd.css';
+
+#__chrome-dropship-extension-container__ {
+  .content-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99999;
+
+    *::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    *::-webkit-scrollbar-track {
+      background-color: rgba(255, 255, 255, 0);
+      border-radius: 10px;
+    }
+    *::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .ant-modal-body {
+      .data-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        color: #555;
+        font-size: 14px;
+
+        & + .data-item {
+          margin-top: 10px;
+        }
+
+        h3, h4 {
+          all: unset;
+        }
+
+        & > strong {
+          width: 8ch;
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+
+        &.data-item-images {
+          flex-direction: column;
+          align-items: flex-start;
+          
+          & > div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            gap: 5px;
+            margin-top: 5px;
+            overflow: hidden;
+            overflow-x: auto;
+
+            .ant-image {
+              flex: 0 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

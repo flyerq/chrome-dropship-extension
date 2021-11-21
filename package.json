@@ -1,0 +1,63 @@
+{
+  "name": "chrome-dropship-extension",
+  "version": "1.0.0",
+  "description": "Chrome dropship extension for shopify",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lxieyang/chrome-extension-boilerplate-react.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production node scripts/build.js",
+    "start": "node scripts/webserver.js",
+    "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@hot-loader/react-dom": "^17.0.1",
+    "antd": "^4.16.13",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hot-loader": "^4.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@types/chrome": "^0.0.161",
+    "@types/lodash": "^4.14.177",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/webpack-env": "^1.16.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.5.0",
+    "dotenv-webpack": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^6.1.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "prettier": "^2.4.1",
+    "source-map-loader": "^3.0.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.2.4",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  }
+}
