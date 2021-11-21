@@ -5,9 +5,7 @@ import './index.less';
 import Options from './Options';
 
 render(
-  <React.StrictMode>
-    <Options />
-  </React.StrictMode>,
+  <Options />,
   document.getElementById('root')
 );
 

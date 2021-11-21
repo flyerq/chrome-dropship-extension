@@ -2,7 +2,7 @@ import isNil from "lodash/isNil";
 import concat from "lodash/concat";
 import compact from "lodash/compact";
 import find from "lodash/find";
-import { Product } from "../../interfaces";
+import { Product } from "../interfaces";
 
 /**
  * inject proxy script to access page original context variables

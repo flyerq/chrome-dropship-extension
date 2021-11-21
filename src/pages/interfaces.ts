@@ -31,3 +31,13 @@ export interface MessageResponse<DataType> {
   data?: DataType | null;
   error?: any;
 }
+
+export interface UserOptions {
+  /** Shopify API Params */
+  shopifyApiParams: {
+    /** Shopify shop name */
+    shopName: string;
+    /** Shopify access token (private app password) */
+    accessToken: string;
+  }
+}

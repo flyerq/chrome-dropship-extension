@@ -5,9 +5,7 @@ import './index.less';
 import Popup from './Popup';
 
 render(
-  <React.StrictMode>
-    <Popup />
-  </React.StrictMode>,
+  <Popup />,
   document.getElementById('root')
 );
 

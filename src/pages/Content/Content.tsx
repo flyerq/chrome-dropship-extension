@@ -2,7 +2,8 @@ import React, { useState, useRef } from 'react';
 import { Button, Modal, Tag, Image } from 'antd';
 import { FileSearchOutlined } from '@ant-design/icons';
 import { getProduct } from './extractor';
-import { Product, MessageResponse } from "../../interfaces";
+import { Product, MessageResponse } from "../interfaces";
+import { getOptions } from '../common';
 import './Content.less';
 
 export default function Content () {
@@ -22,7 +23,9 @@ export default function Content () {
 
   const handleSave = async () => {
     if (product === null) return;
+    
     setSaveLoading(true);
+    const { shopifyApiParams: { shopName } } = await getOptions();
 
     // send message to background script to save product data
     chrome.runtime.sendMessage({
@@ -36,7 +39,7 @@ export default function Content () {
         afterClose: () => {
           if (ok) {
             setProductDialogVisible(false);
-            setTimeout(() => window.open(`https://${process.env.SHOP_NAME}.myshopify.com/collections/all`), 0);
+            setTimeout(() => window.open(`https://${shopName}.myshopify.com/collections/all`), 0);
           }
         }
       });

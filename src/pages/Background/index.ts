@@ -3,7 +3,8 @@ import uniqBy from "lodash/uniqBy";
 import isEmpty from "lodash/isEmpty";
 import findIndex from "lodash/findIndex";
 import pick from "lodash/pick";
-import { Product, Message } from "../../interfaces";
+import { Product, Message } from "../interfaces";
+import { getOptions } from '../common';
 
 chrome.runtime.onMessage.addListener((message: Message<Product>, sender, sendResponse) => {
   const { type, data } = message;
@@ -47,14 +48,15 @@ async function saveProduct(product: Product) {
 }
 
 async function shopifyProductApi(product: any, method: string = 'POST') {
+  const { shopifyApiParams: { shopName, accessToken } } = await getOptions();
   let apiSuffix = method === 'PUT' ? `/${product.id}` : '';
   let res = await fetch(
-    `https://${process.env.SHOP_NAME}.myshopify.com/admin/api/2021-10/products${apiSuffix}.json`,
+    `https://${shopName}.myshopify.com/admin/api/2021-10/products${apiSuffix}.json`,
     {
       method,
       headers: {
         'Content-type': 'application/json',
-        'X-Shopify-Access-Token': process.env.ACCESS_TOKEN as string,
+        'X-Shopify-Access-Token': accessToken as string,
       },
       body: JSON.stringify({ product }),
     },
