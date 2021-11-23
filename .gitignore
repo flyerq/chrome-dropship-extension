@@ -10,7 +10,7 @@
 # /build
 
 # secrets files must ignor in the actual scene
-#.env.secrets
+.env.secrets
 
 # misc
 .DS_Store
