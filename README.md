@@ -5,9 +5,11 @@ A coding challenge project for extracting product data to Shopify
 ## Installing
 
 1. Clone or download this repository.
-2. Access chrome://extensions/ to open Chrome Extensions page.
-3. Check the Developer Mode switch to enable developer mode.
-4. Click the Load unpacked button and select the build folder in the repository.
+2. Run `npm install` to install the dependencies.
+3. Run `npm run build` to build production release.
+4. Access chrome://extensions/ to open Chrome Extensions page.
+5. Check the Developer Mode switch to enable developer mode.
+6. Click the Load unpacked button and select the build folder in the repository.
 
 ## Running
 
