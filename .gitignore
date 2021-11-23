@@ -7,7 +7,7 @@
 /coverage
 
 # production
-# /build
+/build
 
 # secrets files must ignor in the actual scene
 .env.secrets
